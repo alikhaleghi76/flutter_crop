@@ -20,7 +20,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  crop:
+  cropper:
     path: ../
   url_launcher: any
   flutter_icons: any

@@ -1,3 +1,6 @@
+### [0.5.2] - 2021/03/17
+- Add scale handler to main.dart and bug fix
+
 ### [0.5.0] - 2021/03/03
 - Flutter 2.0 and Dart 2.12.0 support.
 

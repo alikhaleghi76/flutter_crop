@@ -1,9 +1,9 @@
 import 'dart:ui' as ui;
 import 'dart:math';
 
-import 'package:crop/src/crop_render.dart';
-import 'package:crop/src/geometry_helper.dart';
-import 'package:crop/src/matrix_decomposition.dart';
+import 'package:cropper/src/crop_render.dart';
+import 'package:cropper/src/geometry_helper.dart';
+import 'package:cropper/src/matrix_decomposition.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
@@ -239,7 +239,6 @@ class _CropState extends State<Crop> with TickerProviderStateMixin {
             ..scale(s, s, 1),
           child: FittedBox(
             child: widget.child,
-            fit: BoxFit.cover,
           ),
         ),
       );

@@ -1,4 +1,4 @@
-import 'package:crop/src/geometry_helper.dart';
+import 'package:cropper/src/geometry_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 

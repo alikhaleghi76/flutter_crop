@@ -1,7 +1,7 @@
 import 'dart:ui' as ui;
 import 'package:app/centered_slider_track_shape.dart';
 import 'package:flutter/material.dart';
-import 'package:crop/crop.dart';
+import 'package:cropper/cropper.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:image_gallery_saver/image_gallery_saver.dart';
@@ -30,6 +30,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   final controller = CropController(aspectRatio: 1000 / 667.0);
   double _rotation = 0;
+  double _scale = 25;
   BoxShape shape = BoxShape.rectangle;
 
   void _cropImage() async {
@@ -108,7 +109,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 shape: shape,
                 child: Image.asset(
                   'images/sample.jpg',
-                  fit: BoxFit.cover,
                 ),
                 /* It's very important to set `fit: BoxFit.cover`.
                    Do NOT remove this line.
@@ -144,6 +144,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   controller.offset = Offset.zero;
                   setState(() {
                     _rotation = 0;
+                    _scale = 25;
                   });
                 },
               ),
@@ -162,6 +163,25 @@ class _MyHomePageState extends State<MyHomePage> {
                       setState(() {
                         _rotation = n.roundToDouble();
                         controller.rotation = _rotation;
+                      });
+                    },
+                  ),
+                ),
+              ),
+              Expanded(
+                child: SliderTheme(
+                  data: theme.sliderTheme.copyWith(
+                  ),
+                  child: Slider(
+                    divisions: 100,
+                    value: _scale,
+                    min: 25,
+                    max: 100,
+                    label: '×${_scale/25}',
+                    onChanged: (n) {
+                      setState(() {
+                        _scale = n.roundToDouble();
+                        controller.scale = _scale / 25;
                       });
                     },
                   ),
