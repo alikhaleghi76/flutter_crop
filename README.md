@@ -1,3 +1,5 @@
+# THIS IS A FORK FROM [Flutter Crop](https://github.com/xclud/flutter_crop)!
+# THIS PROJECT IS NO LONGER MAINTAINED. USE [Flutter Crop](https://github.com/xclud/flutter_crop)!
 
 # cropper
 [![pub package](https://img.shields.io/pub/v/crop.svg)](https://pub.dartlang.org/packages/crop)
