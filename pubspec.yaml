@@ -1,6 +1,6 @@
 name: cropper
 description: Crop any widget/image in Android, iOS, Web and Desktop with fancy and customizable UI, in pure Dart code.
-version: 0.5.2
+version: 0.5.3
 homepage: https://github.com/alikhaleghi76/flutter_crop
 
 
